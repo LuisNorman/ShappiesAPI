@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 
+# Class used as alternative method to verify emails
 
 class AuthenticationEmailBackend(object):
     def authenticate(self, username=None, password=None, **kwargs):

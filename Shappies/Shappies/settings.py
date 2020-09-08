@@ -46,9 +46,9 @@ ALLOWED_HOSTS = []
 
 # restrict the application to logged in users only
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': {
+    'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-    },
+    ),
     # added this as well bc it wasn't noticing I was passing
     # the authorization token in the headers
     'DEFAULT_AUTHENTICATION_CLASSES': (
